@@ -4,15 +4,11 @@ exports.convertLength = (req, res) => {
   let result;
 
   if (!fromUnit || !toUnit || !value) {
-    return res
-      .status(400)
-      .json({ error: "Todos os parametros são obrigatórios" });
+    return res.status(400).json({ error: "Todos os parametros são obrigatórios" });
   }
 
   if (fromUnit === toUnit) {
-    return res
-      .status(400)
-      .json({ error: "As unidades de medidas utilizadas são as mesmas!" });
+    return res.status(400).json({ error: "As unidades de medidas utilizadas são as mesmas!" });
   }
 
   if (fromUnit === "Quilometro") {
